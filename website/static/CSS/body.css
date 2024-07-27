@@ -1,0 +1,106 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+/* background imagery */
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.body-home .background-image,
+.body-sign-up .background-image,
+.body-login .background-image,
+.body-forgot-password .background-image {
+  background-image: url('../images/background_image.jpg');
+}
+
+.body-discovery-cart-tour .background-image {
+  background-image: url('../images/Discovery_Cart_Tour.jpg');
+}
+
+.body-animals-in-action .background-image {
+  background-image: url('../images/Animals_in_Action.jpg');
+}
+
+.body-australian-outback-adventure .background-image {
+  background-image: url('../images/Australian_Outback_Adventure.jpg');
+}
+
+.body-safari-trail .background-image {
+  background-image: url('../images/Safari_Trail.jpg');
+}
+
+.body-childrens-zoo .background-image {
+  background-image: url('../images/Childrens_Zoo.jpg');
+}
+
+.body-exclusive-experiences .background-image {
+  background-image: url('../images/Exclusive_Experience.jpg');
+}
+
+.body-plan-your-visit .background-image {
+  background-image: url('../images/plan_your_visit.jpg');
+}
+
+.body-plan-your-stay .background-image {
+  background-image: url('../images/plan_your_stay1.jpeg');
+}
+
+.body-wildlife .background-image {
+  background-image: url('../images/wildlife.jpg');
+}
+
+.body-education .background-image {
+  background-image: url('../images/education.jpg');
+}
+
+.body-things-to-do .background-image {
+  background-image: url('../images/things_to_do.jpeg');
+}
+
+.body-guided-tours .background-image {
+  background-image: url('../images/guided_tours.jpg');
+}
+
+.body-materials .background-image {
+  background-image: url('../images/educational_materials.jpg');
+}
+
+.body-school-groups .background-image {
+  background-image: url('../images/school_groups.jpeg');
+}
+
+.body-rewards .background-image {
+  background-image: url('../images/rewards.jpg');
+}
+
+.body-my-cart .background-image {
+  background-image: url('../images/cart_bookings.jpg');
+}
+
+.body-bookings .background-image {
+  background-image: url('../images/cart_bookings.jpg');
+}
+
+.body-help-center .background-image {
+  background-image: url('../images/help_center.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+

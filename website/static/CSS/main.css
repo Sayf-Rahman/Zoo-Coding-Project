@@ -1,0 +1,670 @@
+/* ATTRACTION PAGE */
+
+/* banners */
+.content-header-container {
+  width: 100%;
+  height: 21vh;
+  background-color: rgb(230, 226, 226);
+  border-top: 2px solid black; 
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+.content-header {
+  font-size: 30px;
+  margin-bottom: 2vh;
+}
+
+.sub-header {
+  font-size: 20px;
+  margin-bottom: 3vh;
+}
+
+/* styling of the different attractions */
+.attraction-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.attraction {
+  background-color: rgb(230, 226, 226);
+  padding: 5%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.attraction img {
+  width: 100%;
+  height: auto;
+}
+
+.attraction h2 {
+  margin: 10px 0;
+  color: rgb(85, 176, 85);
+}
+
+.age-info, .ticket-info, .time-info, .availability-info {
+  width: 100%;
+  text-align: center;
+}
+
+.age-info img, .ticket-info img, .time-info img, .availability-info img{
+  width: 11%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 20px;
+}
+
+.ticket-info img {
+  width: 9%;
+}
+
+.age-info span, .ticket-info span, .time-info span, .availability-info span {
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.brief-attraction-info p {
+  font-size: 18px;
+}
+
+.brief-attraction-info a {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+.brief-attraction-info a:hover {
+  text-decoration: underline;
+}
+
+/* attraction page */
+.attraction-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin: 3vh 2%;
+}
+
+.attraction-left-container {
+  width: 30%;
+  margin-right: 2%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 5vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.attraction-header {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.availability-calendar-section, .availability-date-section {
+  display: flex;
+  justify-content: center;
+}
+
+.book-now-button, .cart-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.book-now, .faq-button, .cart {
+  width: 40%;
+  padding: 10px;
+  background-color: rgb(85, 176, 85);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.faq-button {
+  width: 18%;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.book-now:hover, .faq-button:hover, .cart:hover {
+  background-color: rgb(6, 126, 6);
+}
+
+.price-per-person {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.attraction-right-container {
+  width: 70%;
+  background-color: rgb(230, 226, 226);
+  border: 2px solid black;
+  padding: 5vh;
+}
+
+.attraction-details-section {
+  text-align: center;
+  margin: 4vh 10%;
+}
+
+.attraction-details-section p {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.attraction-details-section li {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 2vh;
+}
+
+.attraction-details {
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-top: 22vh;
+}
+
+ /* Flatpickr calendar */
+ .flatpickr-calendar.animate.inline {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-top: 4vh;
+}
+
+#selected-date {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 2vh;
+  background-color: lightgrey;
+  width: 50%;
+}
+
+.flatpickr-month {
+  background-color: green !important;
+  color: white !important;
+}
+
+.flatpickr-monthDropdown-months, .flatpickr-weekdays {
+  background-color: rgb(85, 176, 85) !important; 
+  color: white !important;
+}
+
+.flatpickr-day.today {
+  background-color: rgb(85, 176, 85); 
+  color: white; 
+}
+
+
+.flatpickr-day.disabled {
+  color: #ccc; 
+}
+
+/* plan your visit page */
+.boxes-container {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+
+.small-box, .small-box-2 {
+  width: 30%;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-right: -3%;
+  z-index: 1;
+  border: 2px solid black;
+  background-color:  rgb(230, 226, 226);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.small-box-2 {
+  margin-left: -3%;
+}
+
+.small-box-header, .small-box-details, .wildlife-header, .reward-header {
+  font-size: 30px;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.small-box-info {
+  margin-top: 5vh;
+}
+
+.small-box-details {
+  font-size: 20px;
+}
+
+.big-box, .big-box-2 {
+  width: 40%; 
+  height: 50vh;
+  z-index: 0;
+  border: 2px solid black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.big-box-2 {
+  margin-left: -3%;
+}
+
+.big-box img, .big-box-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* wildlife page */
+.wildlife-container {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wildlife-section {
+  width: 70%;
+  background-color: rgb(230, 226, 226);
+  display: flex;
+}
+
+.wildlife-image {
+  width: 50%;
+  height: 100%;
+}
+
+.wildlife-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.white-container {
+  background-color: white;
+  width: 46%;
+  height: 99%;
+  margin-left: 2%;
+  border: 2px solid black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.wildlife-info {
+  margin-top: 3vh;
+}
+
+.wildlife-details, .hotel-details {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 3vh;
+  padding: 0 1%;
+}
+
+.wildlife-header {
+  color :rgb(4, 172, 4); 
+}
+
+/* education page */
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 2%; 
+}
+
+.education-box {
+  width: 32%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+  position: relative;
+  text-decoration: none;
+  filter: brightness(75%);
+}
+
+.education-box:hover {
+  filter: brightness(100%);
+  transition: 1.5s;
+}
+
+.education-box img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.education-type, .hotel-image p {
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* things-to-do page */
+.activity-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100vh;
+  margin-left: 10%;
+  margin-top: 3vh;
+  border: 2px solid black;
+}
+.activity-box {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+  text-decoration: none;
+  filter: brightness(75%);
+  cursor: pointer;
+}
+
+.activity-box:hover {
+  filter: brightness(100%);
+  transition: 1.5s;
+}
+
+.activity-box img, .attraction-left-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.activity-box p {
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* school groups page */
+.school-groups-container {
+  max-width: 50%;
+  margin: 2vh auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.school-groups-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.school-groups-item {
+  margin-bottom: 1vh;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.school-groups-item b {
+  color: #555;
+}
+
+/* rewards page */
+.reward-banner-container {
+  width: 100%;
+  height: 27vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.reward-banner {
+  width: 70%;
+  height: 100%;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+}
+
+.reward-info {
+  text-align: center;
+  font-size: larger;
+  margin-top: 3vh;
+  font-weight: 600;
+}
+
+.reward-box-container {
+  width: 100%;
+  margin: 7vh 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.reward-box {
+  width: 45%;
+  height: 40vh;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.reward-left-box {
+  width: 65%;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reward-left-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.reward-right-box {
+  padding: 10px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.reward-right-box p {
+  margin: 1vh;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* plan-your-stay page */
+.availability-section {
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.availability-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(85, 176, 85);
+  text-align: center;
+}
+
+.input-availability-container, .input-quantity-container {
+  margin-bottom: 2vh;
+}
+
+.input-availability-container label, .input-quantity-container label{
+  display: block;
+  font-weight: 600;
+}
+
+.input-availability-container select, .input-availability-container input[type="date"],
+.input-quantity-container select, .input-quantity-container input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-quantity-container select, .input-quantity-container input[type="date"] {
+  width: 50%;
+}
+
+/* my cart page */
+.navigation {
+  width: 70%;
+  height: 7vh;
+  background-color: darkgreen;
+  margin: 3vh auto;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 20%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-container {
+  height: 60vh;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  position: relative;
+}
+
+.cart-box {
+  height: 100%;
+  width: 35%;
+  border: 2px solid black;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.cart-header {
+  height: 7vh;
+  background-color: darkgreen;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.cart-header h3 {
+  color: white;
+  margin: 0;
+  margin-left: 3%;
+}
+
+.cart-details {
+  height: 65%;
+  margin-top: 3vh;
+  background-color: #f0f0f0;
+}
+
+/* bookings page */
+.booking-container {
+  height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  position: relative;
+}
+
+.booking-box {
+  height: 100%;
+  width: 40%;
+  border: 2px solid black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(243, 236, 236);
+}
+
+.booking-header {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-sub-header {
+  margin-bottom: -2.5vh;
+}
+
+.detail-sub-header h5 {
+  margin-left: 20%;
+  color: #7d7878;
+}
+
+/* help-centre page */
+.faq {
+  margin-bottom: 20px;
+}
+
+.question {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.answer {
+  display: none;
+  font-size: large;
+  padding-left: 10px;
+}
+
+.faq:hover .answer {
+  display: block;
+}
+
+
+
+
+

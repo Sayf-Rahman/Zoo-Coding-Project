@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Materials{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Materials</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .education-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3vh 1%; 
+  }
+  .education-box {
+    margin-bottom: 3vh;
+  }
+  .education-type {
+    background-color: transparent; 
+  }
+</style>
+
+<div class="education-container">
+  <a href="https://www.zoo.com/channel/animals" target="_blank" class="education-box" style="background-color: red;">
+    <div class="education-type">Zoo Quiz</div>
+  </a>
+  <a href="https://www.youtube.com/watch?v=pJyAk8RQis8" target="_blank" class="education-box" style="background-color: rgb(85, 176, 85)">
+    <div class="education-type">Animal Facts</div>
+  </a>
+  <a href="https://ypte.org.uk/factsheets?gad_source=1&gclid=CjwKCAjwrIixBhBbEiwACEqDJSNwGMbFj1EuJW2FoWKdfXAXdqVaPF72cWZG5MOpWC87-SzbPXy47RoC7dYQAvD_BwE&hide_donation_prompt=1" target="_blank" class="education-box" style="background-color: brown">
+    <div class="education-type">Factsheets</div>
+  </a>
+  <a href="https://bioone.org/vista-march-2022?gad_source=1&gclid=CjwKCAjwrIixBhBbEiwACEqDJeZZ6ptdw9VYRSYeoG9kghmnmyuabsVIpzEbtb7CSqU7Jm1e5cMY4hoCE-sQAvD_BwE" target="_blank" class="education-box" style="background-color: pink">
+    <div class="education-type">Articles</div>
+  </a>
+  <a href="https://school-learningzone.co.uk/key_stage_one/ks1_science/animals_and_plants/types_of_animals/types_of_animals.html#:~:text=The%20five%20most%20well%20known,arachnids%20(spiders)%20and%20insects." target="_blank" class="education-box" style="background-color: lightblue">
+    <div class="education-type">Types of Animals</div>
+  </a>
+  <a href="https://www.twinkl.co.uk/resource/t-t-9328-the-zoo-lesson-plan-ideas-ks1" target="_blank" class="education-box" style="background-color: orange;">
+    <div class="education-type">Lesson Plans</div>
+  </a>
+</div>
+
+{% endblock %}

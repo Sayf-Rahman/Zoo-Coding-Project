@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Animals in Action{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Animals in Action</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content%}
+
+<style>
+  .age-info img, .ticket-info img, .time-info img, .availability-info img {
+    width: 25%;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£20 & over</div>
+    <div class="availability-calendar-section">
+      <div id="availability-calendar"></div>
+    </div>
+    <div class="availability-date-section">
+      <div id="selected-date"></div>
+    </div>
+    <div class="book-now-button">
+      <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+    </div>
+    <p class="price-per-person">*Price is per person.</p>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header">Animals in Action</div>
+    <div class="attraction-details-section">
+      <p>Experience the thrill of our Animals in Action shows, where our talented trainers showcase the amazing abilities and natural behaviors of our animal ambassadors. From breathtaking aerial displays to jaw-dropping feats of agility, witness the extraordinary skills of our animal stars up close. Join us for an unforgettable adventure filled with excitement, education, and plenty of fun for the whole family!</p>
+      <div class="attraction-details">
+        <div class="age-info">
+          <img src="../static/images/people-icon.jpg">
+          <span>For all ages</span>
+        </div><br>
+        <div class="ticket-info">
+          <img src="../static/images/ticket.png">
+          <span>£20 & over</span>
+        </div><br>
+        <div class="time-info">
+          <img src="../static/images/time.jpg">
+          <span>3.5 hours&nbsp&nbsp</span>
+        </div><br>
+        <div class="availability-info">
+          <img src="../static/images/calendar.jpg">
+          <span>Everyday&nbsp&nbsp</span>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}

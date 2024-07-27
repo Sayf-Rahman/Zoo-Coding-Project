@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Plan Your Stay{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Plan Your Stay</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content%}
+
+<style>
+  .attraction-details-section li {
+    text-align: center;
+    list-style-type: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;
+  }
+  .attraction-right-container {
+    background-image: url(../static/images/plan_your_stay2.jpeg);
+  }
+  .book-now-button {
+    margin-top: 5vh;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£110 & over</div>
+    <div class="availability-section">
+      <h2>Check Availability</h2>
+      <div class="input-availability-container">
+        <label for="check-in">Check-in:</label>
+        <input type="date" id="check-in" name="check-in" min="2024-06-01" max="2025-12-31">
+      </div>
+      <div class="input-availability-container">
+        <label for="check-out">Check-out:</label>
+        <input type="date" id="check-out" name="check-out" min="2024-06-01" max="2025-12-31">
+      </div>
+      <div class="input-quantity-container">
+        <label for="rooms">Rooms:</label>
+        <select id="rooms" name="rooms">
+          <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option>
+        </select>
+      </div>
+      <div class="input-quantity-container">
+        <label for="adults">Adults:</label>
+        <select id="adults" name="adults"><option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option>
+        </select>
+      </div>
+      <div class="input-quantity-container" >
+        <label for="children">Children:</label>
+        <select id="children" name="children">
+          <option value="0">0</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option>
+        </select>
+      </div>
+      <div class="book-now-button">
+        <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header" style="color: white;">Book a Stay at our On-site Hotel</div>
+    <div class="attraction-details-section">
+      <ul>
+        <li><b>Accommodation Options:</b> <br> Choose from a variety of rooms and suites designed to cater to different preferences and group sizes. Whether you're traveling solo, with family, or friends, we have the perfect room for you.</li>
+        <li><b>Amenities:</b> <br> Enjoy complimentary breakfast, free Wi-Fi, access to zoo attractions, a swimming pool, fitness center, and delicious dining options available right at your doorstep.</li>
+        <li><b>Wildlife Encounters:</b> <br> As a guest of our hotel, you'll have the exclusive opportunity to participate in special tours and animal encounters led by our expert guides. Get up close and personal with some of the world's most incredible wildlife.</li>
+        <li><b>Information:</b> <br> Ready to book your stay? Visit our website or contact us directly to make a reservation. We look forward to welcoming you to our riget zoo hotel!</li>
+        <li><b>Pricing:</b> <br> Starting from £110 per night, our room rates offer excellent value for money. Take advantage of our special offers and packages to make the most of your stay.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

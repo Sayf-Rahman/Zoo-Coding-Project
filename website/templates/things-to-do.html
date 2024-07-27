@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Things to Do{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Things to Do</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="activity-container">
+  <a href="/Riget-Zoo-Adventures" class="activity-box">
+      <img src="../static/images/background_image.jpg">
+      <p>Attractions</p>
+  </a>
+  <a href="/exclusive-experiences" class="activity-box">
+      <img src="../static/images/Exclusive_Experience.jpg">
+      <p>Exclusive Experiences</p>
+  </a>
+  <a href="/guided-tours" class="activity-box">
+      <img src="../static/images/guided_tours.jpg">
+      <p>Guided Tours</p>
+  </a>
+  <a href="plan-your-stay.html" class="activity-box">
+      <img src="../static/images/plan_your_stay1.jpeg">
+      <p>On-site Hotel</p>
+  </a>
+</div>
+
+{% endblock %}

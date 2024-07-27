@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Rewards{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Rewards</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="reward-banner-container">
+  <div class="reward-banner">
+    <div class="reward-header"><b>New Account Exclusive Offer: Unlock Special Discounts and Complimentary Tours!</b></div>
+    <div class="reward-info"> Enjoy exclusive benefits, including discounted rates on your first attraction and hotel booking, and indulge in a complimentary guided tour tailored for educational visits. Don't miss out on this opportunity to explore our captivating exhibits and create lasting memories. Sign up now to redeem your offer and start your adventure with us!</div>
+  </div>
+</div>
+
+<div class="reward-box-container">
+  <div class="reward-box">
+    <a href="/Riget-Zoo-Adventures" class="reward-left-box">
+      <img src="../static/images/background_image.jpg" alt="Attractions">
+    </a>
+    <div class="reward-right-box">
+      <p>Discount on First Attraction and Hotel Booking!</p>
+    </div>
+  </div>
+  <div class="reward-box">
+    <a href="/guided-tours" class="reward-left-box">
+      <img src="../static/images/guided_tours.jpg" alt="Guided Tours">
+    </a>
+    <div class="reward-right-box">
+      <p>Sign Up to Receive a Free Guided Tour for Educational Visits!</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

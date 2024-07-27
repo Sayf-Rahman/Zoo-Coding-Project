@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Education{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Education</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="education-container">
+  <a href="/guided-tours" class="education-box">
+    <div class="education-type">Guided Tours</div>
+    <img src="../static/images/guided_tours.jpg">
+  </a>
+  <a href="/materials" class="education-box">
+    <div class="education-type">Educational Materials</div>
+    <img src="../static/images/educational_materials.jpg">
+  </a>
+  <a href="/school-groups" class="education-box">
+    <div class="education-type">School Groups</div>
+    <img src="../static/images/school_groups.jpeg">
+  </a>
+</div>
+
+{% endblock %}

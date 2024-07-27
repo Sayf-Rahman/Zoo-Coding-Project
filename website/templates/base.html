@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/CSS/body.css">
+  <link rel="stylesheet" href="static/CSS/style.css">
+  <link rel="stylesheet" href="static/CSS/main.css">
+  <link rel="stylesheet" href="static/CSS/banner.css">
+  <link rel="stylesheet" href="static/CSS/form.css">
+  <link rel="stylesheet" href="static/CSS/messages.css">
+  <link rel="stylesheet" href="static/CSS/scale.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="{{ background_class }}">
+  <div class="background-image">
+
+    {% block header %}
+      {% block header_button %}{% endblock %}
+    {% endblock %}
+
+    <div class="navbar-container">
+      <nav class="navbar">
+    
+        <div class="logo">
+            <a href="/Riget-Zoo-Adventures" class="company-logo">Riget Zoo Adventures</a>
+        </div>
+        <ul class="menu">
+            <li><a href="/plan-your-visit">Visit</a>
+                <ul class="submenu">
+                    <li><a href="/rewards">Rewards</a></li>
+                    <li><a href="/plan-your-visit">Plan Your Visit</a></li>
+                    <li><a href="/plan-your-stay">Plan Your Stay</a></li>
+                </ul>
+            </li>
+            <li><a href="/wildlife">Wildlife</a></li>
+            <li><a href="/things-to-do">Things to Do</a>
+                <ul class="submenu">
+                    <li><a href="/Riget-Zoo-Adventures">Attractions</a></li>
+                    <li><a href="/exclusive-experiences">Exclusive Experiences</a></li>
+                </ul>
+            </li>
+            <li><a href="/education">Education</a>
+                <ul class="submenu">
+                    <li><a href="/guided-tours">Guided Tours</a></li>
+                    <li><a href="/materials">Materials</a></li>
+                    <li><a href="/school-groups">School Groups</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="info">
+          <div class="left-section">
+            <a href="help-center" class="help-center">Help Center</a>
+            <span class="separator">|</span>
+            <img src="static/images/accessibility.jpg" alt="Accessibility" class="accessibility-icon">
+            <a href="/login" class="account">Account</a>
+          </div>
+          <div class="right-section">
+            <a href="/rewards">
+              <button class="offers">Offers</button>
+            </a>
+            <a href="/bookings">
+              <button class="bookings">Bookings</button>
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+
+{% block error_message %}
+  {% with messages = get_flashed_messages(with_categories=true) %} 
+    {% if messages %}
+      {% for category, message in messages %}
+        {% if category == 'error' %}
+          <div class="error-message" role="alert">
+            {{ message }}
+            <button type="button" class="close-button" onclick="this.parentElement.style.display='none';">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% else %}
+          <div class="success-message" role="alert">
+            {{ message }}
+            <button type="button" class="close-button" onclick="this.parentElement.style.display='none';">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endif%}
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+{% endblock %}
+
+    {% block form %}
+    <div class="form-container">
+      {% block form_content %}{% endblock %}    
+    </div>
+    {% endblock %} 
+
+  </div>
+  
+  {% block content %}{% endblock %}
+
+  <footer class="footer">
+    <a href="/Riget-Zoo-Adventures" class="footer-logo">Riget Zoo Adventures</a>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>About the Zoo</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
+        </div>
+        <div class="footer-column">
+            <h3>Visit Us</h3>
+            <p>Location</p>
+            <p>Hours & Tickets</p>
+            <p>Attractions</p>
+        </div>
+        <div class="footer-column">
+            <h3>Information</h3>
+            <p>FAQs</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Riget Zoo Adventures. All rights reserved.</p>
+      </div>
+    </div>
+</footer>
+
+  {% block js %}{% endblock %}
+
+</body>
+
+</html>
+

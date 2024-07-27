@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Guided Tours{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Guided Tours</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .age-info img, .ticket-info img, .time-info img, .availability-info img {
+    width: 25%;
+  }
+  .attraction-details {
+    margin-top: 8vh;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£42 & over</div>
+    <div class="availability-calendar-section">
+      <div id="availability-calendar"></div>
+    </div>
+    <div class="availability-date-section">
+      <div id="selected-date"></div>
+    </div>
+    <div class="book-now-button">
+      <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+    </div>
+    <p class="price-per-person">*Price is per person.</p>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header">Guided Tours</div>
+    <div class="attraction-details-section">
+      <ul>
+        <li><b>Engaging and Informative Tours:</b> Led by knowledgeable guides, our tours offer interactive experiences filled with fascinating facts and insights about wildlife.</li>
+        <li><b>Explore Diverse Habitats:</b> Journey through various habitats, encountering a wide range of animal species from around the world.</li>
+        <li><b>Up Close with Incredible Wildlife:</b> Get close to majestic animals like giraffes and cheetahs, creating unforgettable memories.</li>
+        <li><b>Conservation Highlights:</b> Learn about our conservation efforts to protect endangered species and their habitats.</li>
+        <li><b>Perfect for All Ages:</b> Whether with family, school groups, or wildlife enthusiasts, our tours cater to everyone's interests and needs.</li>
+      </ul>
+      <div class="attraction-details">
+        <div class="age-info">
+          <img src="../static/images/people-icon.jpg">
+          <span>For all ages</span>
+        </div><br>
+        <div class="ticket-info">
+          <img src="../static/images/ticket.png">
+          <span>£42 & over</span>
+        </div><br>
+        <div class="time-info">
+          <img src="../static/images/time.jpg">
+          <span>3.5 hours&nbsp&nbsp</span>
+        </div><br>
+        <div class="availability-info">
+          <img src="../static/images/calendar.jpg">
+          <span>Everyday&nbsp&nbsp</span>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}Bookings{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Bookings</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .name-field input, .input-field input {
+  border: 2px solid black;
+  border-radius: 0;
+}
+
+.input-group {
+  margin-top: 0;
+}
+</style>
+
+<div class="content-header-container">
+  <div class="banner-text">
+    <div class="sub-header"><b>My Bookings</b></div>
+      <div class="content-header"><b>Finish Booking Your Tickets</b></div> 
+  </div>
+</div>
+
+<div class="navigation" style="width: 80%;">
+  <ul>
+    <li><a href="#">Category</a></li>
+    <li><a href="#">Cart</a></li>
+    <li><a href="#" style="color: orange;">Booking</a></li>
+    <li><a href="#" style="color: orange;">Checkout</a></li>
+  </ul>
+</div>
+
+<div class="booking-container">
+  
+  {% for cart_item in cart.cart_attractions %}
+    <div class="cart-item">
+      <p>{{ cart_item.attraction.name }}</p>
+      <p>Quantity: {{ cart_item.quantity }}</p>
+      <p>Price: {{ cart_item.price }}</p>
+    </div>
+  {% endfor %}
+
+  <div class="booking-box">
+    <div class="booking-header"><h3>Billing Address</h3></div>
+    <div class="booking-details">
+      <div class="detail-sub-header"><h5>Accepted Cards:&nbsp&nbsp&nbsp&nbspVisa&nbsp|&nbsp&nbspMastercard&nbsp|&nbsp&nbspPayPal</h5></div>
+      <form method="POST">
+        <div class="name-group">
+          <div class="name-field">
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+          </div>
+
+          <div class="name-field">
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-field">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="input-field">
+            <input type="text" id="address" name="address" placeholder="Address" required>
+          </div>
+          <div class="input-field">
+            <input type="text" id="text" name="city" placeholder="Town/City" required>
+          </div>
+        </div>
+
+    <div class="booking-header" style="margin-bottom: 2vh;"><h3>Payment</h3></div>
+        <div class="name-group">
+          <div class="name-field">
+            <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on Card" required>
+          </div>
+
+          <div class="name-field">
+            <input type="text" id="expiration-date" name="expiration-date" placeholder="Expiration Date" required>
+          </div>
+        </div>
+        
+        <div class="input-group" style="margin-bottom: -1vh;">
+          <div class="input-field">
+            <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+          </div>
+        </div>
+      
+        <div class="name-group" style="width: 45%; margin-left: 3.5%;">
+          <div class="name-field">
+            <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
+          </div>
+        </div>
+
+        <div class="cart-button">
+          <button type="submit" name="submit" class="cart">Checkout</button>
+        </div>
+          
+      </form>
+    </div>
+  </div>
+</div>
+
+{% if bookings %}
+    <h2>Your Bookings</h2>
+    <ul>
+      {% for booking in bookings %}
+        <li>
+          <p>Attraction: {{ booking.attraction.name }}</p>
+          <p>Date: {{ booking.booked_at }}</p>
+          <form method="POST">
+            <input type="hidden" name="action" value="edit">
+            <input type="hidden" name="booking_id" value="{{ booking.id }}">
+            <button type="submit">Edit</button>
+          </form>
+          <form method="POST">
+            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="booking_id" value="{{ booking.id }}">
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No bookings found.</p>
+  {% endif %}
+{% endblock %}
+
+{% endblock %}

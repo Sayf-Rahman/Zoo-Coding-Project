@@ -1,0 +1,133 @@
+/*SCREENS SMALLER THAN 600PX*/
+@media only screen and (max-width: 600px) {
+
+}
+
+/*MOBILE DEVICES*/
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+}
+
+/*LAPTOPS*/
+@media only screen and (min-width: 769px) and (max-width: 1700px) {
+
+}
+
+/*MONITORS*/
+@media only screen and (min-width: 1701px) {
+
+  /* navbar */
+  .company-logo {
+    font-size: 30px;
+  }
+
+  .menu {
+    width: 50%;
+  }
+
+  .offers, .bookings {
+    width: 150px;
+  }
+
+  .right-section {
+    margin-right: 20px;
+  }
+
+  .accessibility-icon {
+    right: 26.7%;
+    top: 10%;
+  }
+
+  /* styling the different attractions*/  
+  .attraction {
+    height: 75vh;
+  }
+
+  .attraction h2 {
+    margin-bottom: 5%;
+  }
+
+  .age-info span, .ticket-info span {
+    font-size: 20px;
+  }
+  
+  .brief-attraction-info p {
+    font-size: 23px;
+    margin-top: 5%;
+  }
+
+  .brief-attraction-info a {
+    font-size: 20px;
+  }
+ 
+  /*attraction page */
+  .attraction-details-section p {
+    font-size: 25px;
+  }
+
+  .attraction-details {
+    margin-top: 15vh;
+  }
+
+  /* styling form */
+
+  .form-box, .form-box2 {
+    width: 46vh;
+  }
+
+  .form-box {
+    height: 56vh;
+    margin-top: 3%;
+  }
+  
+  .form-box2 {
+    height: 49vh;
+    margin-top: 5%;
+  }
+
+  .form-box3 {
+    height: 47vh;
+  }
+
+  .form-header {
+    font-size: 23px;
+  }
+
+  .form-button{
+    font-size: 17px;
+  }
+
+  .link a, .register-link a, .forgot-password-link a{
+    font-size: 17px;
+  }
+
+  .forgot-password-link {
+    margin-top: 20px;
+  }
+
+  .link{
+    margin-top: 20px;
+  }
+
+  .form-button {
+    width: 35%;
+    height: 3.5vh;
+  }
+
+  /* styles the checkbox */
+  .remember-me label {
+    font-size: 15px; /* Small size for text */
+  }
+
+    /* wildlife page */
+  .wildlife-details {
+    font-size: 20px;
+  }
+
+}
+
+
+
+ 
+
+  

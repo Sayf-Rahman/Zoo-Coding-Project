@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Australian Outback Adventures{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Australian Outback Adventures</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content%}
+
+<style>
+  .age-info img, .ticket-info img, .time-info img, .availability-info img {
+    width: 25%;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£30 & over</div>
+    <div class="availability-calendar-section">
+      <div id="availability-calendar"></div>
+    </div>
+    <div class="availability-date-section">
+      <div id="selected-date"></div>
+    </div>
+    <div class="book-now-button">
+      <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+    </div>
+    <p class="price-per-person">*Price is per person.</p>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header">Australian Outback Adventures</div>
+    <div class="attraction-details-section">
+      <p>Explore the wonders of the Australian Outback right here at our zoo! Immerse yourself in the rich culture and natural wonders of the Outback as you explore our immersive exhibits and interactive experiences. Whether you're walking among the eucalyptus trees or getting up close with our resident marsupials, our Australian Outback Adventures promise an authentic and exhilarating wildlife encounter for visitors of all ages. Come and experience the magic of the Outback with us!</p>
+      <div class="attraction-details">
+        <div class="age-info">
+          <img src="../static/images/people-icon.jpg">
+          <span>For all ages</span>
+        </div><br>
+        <div class="ticket-info">
+          <img src="../static/images/ticket.png">
+          <span>£30 & over</span>
+        </div><br>
+        <div class="time-info">
+          <img src="../static/images/time.jpg">
+          <span>3.5 hours&nbsp&nbsp</span>
+        </div><br>
+        <div class="availability-info">
+          <img src="../static/images/calendar.jpg">
+          <span>Everyday&nbsp&nbsp</span>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}

@@ -1,0 +1,152 @@
+/* styling form */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box, .form-box2, .form-box3 {
+  width: 45vh;
+  background-color: white;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 5);
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box {
+  height: 60vh;
+  margin-top: 2%;
+}
+
+.form-box2 {
+  height: 51vh;
+  margin-top: 4%;
+}
+
+.form-box3 {
+  height: 50vh;
+  margin-top: 5%;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 8%;
+  margin-bottom: 4%;
+  font-weight: 600;
+  font-size: large;
+}
+
+.name-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.name-field {
+  flex: 1; /* Each field takes equal space */
+  display: flex;
+  flex-direction: column;
+  padding: 2%; /* Add padding for spacing */
+  margin-left: 4%;
+}
+
+.name-field label, .input-field label {
+  margin-bottom: 5px;
+  margin-left: 2px;
+}
+
+.name-field input {
+  width: 80%;
+}
+
+.name-field input, .input-field input {
+  padding: 5px;
+  height: 2.5vh;
+  border: 2px solid rgb(85, 176, 85);
+  border-radius: 5px;
+}
+
+.input-group {
+  margin-top: 10px; /* Add space between the name fields and additional fields */
+  margin-left: 6%;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; /* Add space between additional fields */
+}
+
+.input-field input {
+  width: 89%;
+}
+
+.button-container, .verify-button, .reset-button {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container, .reset-button {
+  margin-top: 20px;
+}
+
+.verify-button {
+  margin-bottom: 15px;
+}
+
+.form-button {
+  width: 33%;
+  height: 3.3vh;
+  background-color: rgb(85, 176, 85);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: rgb(6, 126, 6);
+}
+
+.link, .register-link, .forgot-password-link, .verification-link {
+  display: flex;
+  justify-content: center;
+}
+
+.link, .register-link, .forgot-password-link {
+  margin-top: 14px;
+}
+
+.link a, .register-link a, .forgot-password-link, .verification-link a{
+  font-size: 14px;
+}
+
+.forgot-password-link {
+  padding-top: 5px;
+}
+
+.verification-link {
+  margin-bottom: 14px;
+  margin-top: -10px;
+}
+
+/* styles the checkbox */
+.remember-me input[type="checkbox"] {
+  transform: scale(1.2); /* Adjust the size of the checkbox */
+  margin-right: 7px; /* Space between checkbox and text */
+  margin-top: 10px;
+  margin-left: 13px;
+}
+
+.remember-me label {
+  font-size: 14px; /* Small size for text */
+  vertical-align: text-top;
+}

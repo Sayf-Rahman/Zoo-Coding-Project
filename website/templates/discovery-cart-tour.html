@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Discovery Cart Tour{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Discovery Cart Tour</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content%}
+
+<style>
+  .age-info img, .ticket-info img, .time-info img, .availability-info img {
+    width: 25%;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£25 & over</div>
+    <div class="availability-calendar-section">
+      <div id="availability-calendar"></div>
+    </div>
+    <div class="availability-date-section">
+      <div id="selected-date"></div>
+    </div>
+    <div class="book-now-button">
+      <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+    </div>
+    <p class="price-per-person">*Price is per person.</p>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header">Discovery Cart Tour</div>
+    <div class="attraction-details-section">
+      <p>Embark on an exciting journey through our zoo with our Discovery Cart Tour!<br>Hop aboard our comfortable carts as our knowledgeable guides take you on an immersive exploration of our diverse animal exhibits. Learn fascinating facts about our wildlife residents, interact with some of our friendliest creatures, and enjoy up-close encounters you won't forget. Perfect for families and nature enthusiasts of all ages, the Discovery Cart Tour offers a unique and educational experience that's not to be missed!</p>
+      <div class="attraction-details">
+        <div class="age-info">
+          <img src="../static/images/people-icon.jpg">
+          <span>For all ages</span>
+        </div><br>
+        <div class="ticket-info">
+          <img src="../static/images/ticket.png">
+          <span>£25 & over</span>
+        </div><br>
+        <div class="time-info">
+          <img src="../static/images/time.jpg">
+          <span>3.5 hours&nbsp&nbsp</span>
+        </div><br>
+        <div class="availability-info">
+          <img src="../static/images/calendar.jpg">
+          <span>Everyday&nbsp&nbsp</span>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}

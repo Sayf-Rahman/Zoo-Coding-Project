@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Riget Zoo Adventures{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Welcome to Riget Zoo Adventures</h1>
+    {% block header_button %}<a href="/plan-your-visit" class="btn">Plan Your Visit ></a>{% endblock %}
+  </header>
+</div>
+{% endblock %}
+
+{% block content %} 
+
+<div class="content-header-container">
+  <span class="content-header">Choose Your <b>Experience</b></span> 
+</div>
+
+<div class="attraction-grid-container">
+ 
+  <div class="attraction">
+    <img src="../static/images/Discovery_Cart_Tour.jpg" alt="Discover Cart Tour">
+    <h2>Discovery Cart Tour</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>For all ages</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span>£25 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>The Discovery Cart Tour provides a fun and informative ride around the zoo, highlighting its fascinating wildlife and habitats.</p>
+      <a href="/discovery-cart-tour">READ MORE ></a>
+    </div>
+  </div>
+
+  <div class="attraction">
+    <img src="../static/images/Animals_in_Action.jpg" alt="Animals in Action">
+    <h2>Animals in Action</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>Ages 5 & over</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span>£20 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>Animals in Action offers thrilling live demonstrations where guests can witness the intelligence of our zoo's animal residents.</p>
+      <a href="/animals-in-action">READ MORE ></a>
+    </div>
+  </div>
+
+  <div class="attraction">
+    <img src="../static/images/Australian_Outback_Adventure.jpg" alt="Australian Outback Adventure">
+    <h2>Australian Outback Adventure</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>For all ages</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span>£30 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>An unforgettable journey through a replicate of Australia's Outback, encounter iconic wildlife and experience the unique charm of the Down Under.</p>
+      <a href="/australian-outback-adventure">READ MORE ></a>
+    </div>
+  </div>
+
+  <div class="attraction">
+    <img src="../static/images/Safari_Trail.jpg" alt="Safari Trail">
+    <h2>Safari Trail</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>For all ages</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span> £35 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>An immersive Safari Trail experience, where you'll discover exotic creatures and traverse lush landscapes.</p>
+      <a href="/safari-trail">READ MORE ></a>
+    </div>
+  </div>
+
+  <div class="attraction">
+    <img src="../static/images/Childrens_Zoo.jpg" alt="Childrens Zoo">
+    <h2>Childrens Zoo</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>Children aged 3-12</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span>£15 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>A magical journey through our Children's Zoo, where young explorers can interact with friendly animals, play games, and learn about nature.</p>
+      <a href="/childrens-zoo">READ MORE ></a>
+    </div>
+  </div>
+
+  <div class="attraction">
+    <img src="../static/images/Exclusive_Experience.jpg" alt="Exclusive Experience">
+    <h2>Exclusive Experiences</h2><br>
+    <div class="age-info">
+      <img src="../static/images/people-icon.jpg">
+      <span>For all ages</span>
+    </div><br>
+    <div class="ticket-info">
+      <img src="../static/images/ticket.png">
+      <span>£170 and up</span>
+    </div><br>
+    <div class="brief-attraction-info">
+      <p>Unlock unforgettable moments with our Exclusive Experiences, offering special access, behind-the-scenes encounters, and expert-guided tours.</p>
+      <a href="/exclusive-experiences">READ MORE ></a>
+    </div>
+  </div>
+</div>
+
+<div class="wildlife-banner">
+  <h1>Discover Wildlife Animals</h1>
+  <a href="/wildlife" class="view-all">View All ></a>
+  <div class="image-container">
+      <div class="image">
+          <img src="../static/images/jaguar.png" alt="Image 1">
+          <p>Jaguar</p>
+      </div>
+      <div class="image">
+          <img src="../static/images/giraffe.png" alt="Image 2">
+          <p>Giraffe</p>
+      </div>
+      <div class="image">
+          <img src="../static/images/rhinoceros.png" alt="Image 3">
+          <p>Rhinoceros</p>
+      </div>
+      <div class="image">
+          <img src="../static/images/koala.png" alt="Image 4">
+          <p>Koala</p>
+      </div>
+      <div class="image">
+          <img src="../static/images/bee_eater.png" alt="Image 5">
+          <p>Bee-eater</p>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

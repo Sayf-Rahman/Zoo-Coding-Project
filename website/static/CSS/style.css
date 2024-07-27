@@ -1,0 +1,216 @@
+/* styling header */
+.header-container {
+    position: absolute;
+    top: 80%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+  }
+  
+  .header {
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 20px; 
+    border-radius: 10px; 
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: white;
+  }
+  
+  .btn {
+    display: inline-block; 
+    width: 30%;
+    margin-top: 10px; 
+    padding: 3px 10px; 
+    background-color: rgb(4, 172, 4); 
+    color: #fff; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+    font-size: larger;
+  }
+  
+  .btn:hover {
+    background-color: rgb(6, 126, 6); 
+  }
+  
+  /* styling navbar */
+  .navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar {
+    width: 90%;
+    height: 12vh;
+    background-color: white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 4%;
+  }
+  
+  .logo {
+    width: 20%;
+  }
+  
+  .company-logo, .form-logo, .footer-logo {
+    font-family: "Bodoni MT", serif;
+    color: rgb(4, 172, 4);
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+    background-color: transparent !important;
+  }
+  
+  .menu li {
+    margin-right: 60px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid rgb(175, 174, 174);
+    margin-top: auto;
+    margin-left: -0.5%;
+    padding-top: 10px;
+    width: auto;
+  }
+  
+  .submenu li {
+    display: block;
+    margin-left: -30px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 40%;
+    height: auto;
+  }
+  
+  .left-section, .right-section {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .left-section {
+    width: 50%;
+  }
+  
+  .right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .help-center, .account {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .help-center:hover, .account:hover {
+    text-decoration: underline;
+  }
+  
+  .help-center {
+    margin-right: 4%;
+  }
+  
+  .account {
+    margin-right: 10%;
+  }
+  
+  .separator {
+    margin-right: 4%; /* Remove the default margin */
+    position: relative; /* Add relative positioning */
+  }
+  
+  .separator:hover {
+    cursor: default;
+  }
+  
+  .accessibility-icon {
+    height: 25px;
+    width: 25px;
+    position: absolute; /* Add absolute positioning */
+    right: 28.7%;
+    top: 9%;
+  }
+  
+  .offers, .bookings {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    width: 120px;
+    height: 5vh;
+  }
+  
+  .offers {
+    background-color: rgb(85, 176, 85);
+    margin-right: 15px;
+  }
+  
+  .bookings {
+    background-color: orange;
+  }
+
+  /* styles the footer */
+  .footer {
+    background-color: rgb(4, 172, 4);
+    color: white;
+    padding: 3% 0;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 40px;
+    color: white;
+  }
+
+  .footer-container {
+    width: 100;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+  }
+
+  .footer-column {
+    text-align: center;
+  }

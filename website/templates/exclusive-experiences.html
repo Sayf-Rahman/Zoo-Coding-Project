@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Exclusive Experiences{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>Exclusive Experiences</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content%}
+
+<style>
+  .age-info img, .ticket-info img, .time-info img, .availability-info img {
+    width: 25%;
+    margin-top: 0;
+  }
+  .attraction-details {
+    margin-top: 13vh;
+  }
+  .attraction-details-section p {
+    font-size: 18px;
+  }
+  .attraction-header {
+    color: red;
+    text-decoration: underline;
+  }
+</style>
+
+<div class="attraction-container">
+  <div class="attraction-left-container">
+    <div class="attraction-header">£170 & over</div>
+    <div class="availability-calendar-section">
+      <div id="availability-calendar"></div>
+    </div>
+    <div class="availability-date-section">
+      <div id="selected-date"></div>
+    </div>
+    <div class="book-now-button">
+      <a href="{{ url_for('auth.add_to_cart', attraction_id=attraction.id) }}" class="book-now">Book Now</a>
+    </div>
+    <p class="price-per-person">*Price is per person.</p>
+  </div>
+  <div class="attraction-right-container">
+    <div class="attraction-header">Exclusive Experiences (VIP)</div>
+    <div class="attraction-details-section">
+      <p>Indulge in unforgettable moments with our Exclusive Experiences, where you can elevate your zoo visit to new heights of luxury and excitement. Whether you're seeking a personalized tour with our expert guides, a behind-the-scenes peek into animal care and conservation efforts, or a private encounter with your favorite creatures, our Exclusive Experiences offer something extraordinary for every animal lover. Treat yourself to VIP treatment as you enjoy exclusive access to restricted areas, intimate animal encounters, and tailor-made adventures designed to fulfill your wildest dreams. Whether you're celebrating a special occasion or simply seeking a one-of-a-kind adventure, our Exclusive Experiences promise to create memories that will last a lifetime. Join us for an unforgettable journey into the heart of the wild, where extraordinary moments await around every corner!</p>
+      <div class="attraction-details">
+        <div class="age-info">
+          <img src="../static/images/people-icon.jpg">
+          <span>For all ages</span>
+        </div><br>
+        <div class="ticket-info">
+          <img src="../static/images/ticket.png">
+          <span>£170 & over</span>
+        </div><br>
+        <div class="time-info">
+          <img src="../static/images/time.jpg">
+          <span>3.5 hours&nbsp&nbsp</span>
+        </div><br>
+        <div class="availability-info">
+          <img src="../static/images/calendar.jpg">
+          <span>Everyday&nbsp&nbsp</span>
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}

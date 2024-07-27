@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}My Cart{% endblock %}
+
+{% block header %}
+<div class="header-container">
+  <header class="header">
+    <h1>My Cart</h1>
+  </header>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="navigation">
+  <ul>
+    <li><a href="/Riget-Zoo/Adventures">Category</li>
+    <li><a href="/my-cart" style="color: orange;">Cart</a></li>
+    <li><a href="/bookings">Booking</a></li>
+    <li><a href="#">Checkout</a></li>
+  </ul>
+</div>
+
+<div class="cart-container">
+  <div class="cart-box">
+    <div class="cart-header"><h3>Include:</h3></div>
+    <div class="cart-details">
+      {% for cart_item in cart.cart_attractions %}
+        <div class="cart-item">
+          <p>{{ cart_item.attraction.name }}</p>
+          <p>Quantity: {{ cart_item.quantity }}</p>
+          <p>Price: {{ cart_item.price }}</p>
+          <div class="quantity-controls">
+            <a href="{{ url_for('auth.increase_quantity', cart_item_id=cart_item.id) }}">+</a>
+            <a href="{{ url_for('auth.decrease_quantity', cart_item_id=cart_item.id) }}">-</a>
+            <a href="{{ url_for('auth.remove_from_cart', cart_item_id=cart_item.id) }}">Remove</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  <div class="cart-box">
+    <div class="cart-header"><h3>Cart Details:</h3></div>
+    <div class="cart-details">
+      {% if attraction %}
+      <p>Attraction: {{ attraction.name }}</p>
+      <p>Quantity: {{ quantity }}</p>
+      <p>Total Price: {{ attraction.price * quantity }}</p>
+      {% else %}
+      <p>No booking details.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
